@@ -1,0 +1,16 @@
+-- Create a new table for normalized data in 1NF
+CREATE TABLE ProductDetail_1NF (
+    OrderID INT,
+    CustomerName VARCHAR(255),
+    Product VARCHAR(255)
+);
+
+-- Insert data into 1NF table (splitting multiple products per order)
+INSERT INTO ProductDetail_1NF (OrderID, CustomerName, Product)
+VALUES
+    (101, 'John Doe', 'Laptop'),
+    (101, 'John Doe', 'Mouse'),
+    (102, 'Jane Smith', 'Tablet'),
+    (102, 'Jane Smith', 'Keyboard'),
+    (102, 'Jane Smith', 'Mouse'),
+    (103, 'Emily Clark', 'Phone');
